@@ -1,0 +1,16 @@
+PeakListPath = /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/metfrag_test/lcmsms_MoNA_Sirius.txt
+MetFragDatabaseType = PubChem
+IonizedPrecursorMass = 112.9979
+DatabaseSearchRelativeMassDeviation = 5
+FragmentPeakMatchAbsoluteMassDeviation = 0.008
+FragmentPeakMatchRelativeMassDeviation = 5
+PrecursorIonMode = 1
+IsPositiveIonMode = True
+MetFragScoreTypes = FragmenterScore
+MetFragScoreWeights = 1.0
+MetFragCandidateWriter = CSV
+SampleName = example_4
+ResultsPath = /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/metfrag_test/
+MaximumTreeDepth = 2
+MetFragPreProcessingCandidateFilter = UnconnectedCompoundFilter
+MetFragPostProcessingCandidateFilter = InChIKeyFilter

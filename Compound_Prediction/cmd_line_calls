@@ -1,0 +1,40 @@
+
+
+#Sirius
+sirius --input /Users/ciaraconway/demo-data/mgf/laudanosine.mgf --output /Users/ciaraconway/demo-data/test formula -p orbitrap fingerprint structure compound-classes write-summaries --output /Users/ciaraconway/demo-data/out
+Calls the compound prediction and formula prediction
+
+test : /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/lcmsms_MoNA_Sirius
+sirius --input /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/lcmsms_MoNA_Sirius_ul_pos.msp --output /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/test9 --ignore-formula formula -p orbitrap fingerprint structure compound-classes write-summaries --output /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/out9
+sirius --input /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/lcmsms_MoNA_Sirius_no.msp --output /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/test5 --ignore-formula formula -p orbitrap -c 5
+sirius --input /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/Taxonomy_FullDataSet_2021-10-08_Inchi_smiles_1.msp --output /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/test11 --ignore-formula formula --database=ALL -p default fingerprint structure compound-classes write-summaries --output /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/out11
+sirius --input /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/Taxonomy_FullDataSet_2021-10-08_Inchi_smiles_1.msp --output /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/test10 --ignore-formula formula -p default fingerprint structure compound-classes write-summaries --output /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/out10
+sirius -c 10 –database=pubchem –fingerid /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/Taxonomy_FullDataSet_2021-10-08_Inchi_smiles_1.msp
+sirius --input /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/file1.ms --output /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/test13 --ignore-formula formula --database=ALL -p default fingerprint structure compound-classes write-summaries --output /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/out13
+sirius --input /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/file1.ms --output /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/test14 --ignore-formula formula --database=pubchem -p default fingerprint structure compound-classes write-summaries --output /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/sirius_test/out14
+#MSPepSearch - PC only
+.\MSPepSearch64.exe yD /Z 0.01 /M 0.01 /MatchPolarity /LIB "C:\NIST20\MSSEARCH\hr_msms_nist" /LIB "C:\NIST20\MSSEARCH\lr_msms_nist" /LIB "C:\NIST20\MSSEARCH\apci_msms_nist" /LIB "C:\NIST20\MSSEARCH\biopep_msms_nist" /LIB "C:\NIST20\MSSEARCH\MoNA-export-LipidBlast" /MinMF 500 /MinInt 5 /HITS 20 /OutChemForm /OutCASrn /OutMW /OutIK /OutMaxScore /INP "C:\Users\cconwa10\Desktop\MSMS_Tot_Lipids_080621\newfile_WG_unknown_all_n_n2.msp” /OUTTAB "C:\Users\cconwa10\Desktop\MSMS_Tot_Lipids_080621\newfile_WG_unknown_all_n_hybrid_700_20_n2.tsv”
+.\MSPepSearch64.exe yD /Z 0.01 /M 0.01 /MatchPolarity /LIB "C:\NIST20\MSSEARCH\hr_msms_nist" /LIB "C:\NIST20\MSSEARCH\lr_msms_nist" /LIB "C:\NIST20\MSSEARCH\apci_msms_nist" /LIB "C:\NIST20\MSSEARCH\biopep_msms_nist" /LIB "C:\NIST20\MSSEARCH\MoNA-export-LipidBlast" /MinMF 500 /MinInt 5 /HITS 20 /OutChemForm /OutCASrn /OutMW /OutIK /OutMaxScore /INP "C:\Users\cconwa10\Desktop\MSMS_Tot_Lipids_080621\newfile_WG_unknown_all_n_n2.msp” /OUTTAB "C:\Users\cconwa10\Desktop\MSMS_Tot_Lipids_080621\newfile_WG_unknown_all_n_hybrid_700_20_n2.tsv”
+
+#Biotransformer
+
+
+#MoNA Download Call
+import requests
+headers = {
+    'Accept': 'text/msp',
+}
+response = requests.get('https://mona.fiehnlab.ucdavis.edu/rest/spectra/search?query=tags.text=="LC-MS" and metaData=q=\'name=="ms level" and value=="MS2"\'', headers=headers)
+
+#CFMID
+docker run --rm=true -v ${pwd}:/cfmid/public/ -i wishartlab/cfmid:latest sh -c "cfm-predict 'CC(C)NCC(O)COC1=CC=C(CCOCC2CC2)C=C1' 0.001 /trained_models_cfmid4.0/[M+H]+/param_output.log /trained_models_cfmid4.0/[M+H]+/param_config.txt 1"
+
+docker run --rm=true -v ${pwd}:/cfmid/public/ -i wishartlab/cfmid:latest sh -c "cfm-predict 'O=C(O)CCC1=NC(C=2C=CC=CC2)=C(O1)C=3C=CC=CC3' 0.001 /trained_models_cfmid4.0/[M+H]+/param_output.log /trained_models_cfmid4.0/[M+H]+/param_config.txt 1"
+
+for line in `cat chemicals`; do
+> cfm-predict ${line} 0.001 /trained_models_cfmid4.0/[M-H]-/param_output.log /trained_models_cfmid4.0/[M-H]-/param_confi
+g.txt 1
+> done
+
+#MetFrag
+java -jar MetFragCommandLine-2.5.0.jar /Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/metfrag_test/parameter_file.txt

@@ -1,0 +1,46 @@
+import pandas as pd
+import sklearn.ensemble as se
+
+# AdaBoostClassifier
+# BaggingClassifier
+# BayesianGaussianMixture
+# BernoulliNB
+# CalibratedClassifierCV
+# CategoricalNB
+# ClassifierChain
+# ComplementNB
+# DecisionTreeClassifier
+# DummyClassifier
+# ExtraTreeClassifier
+# ExtraTreesClassifier
+# GaussianMixture
+# GaussianNB
+# GaussianProcessClassifier
+# GradientBoostingClassifier
+# GridSearchCV
+# HalvingGridSearchCV
+# HalvingRandomSearchCV
+# HistGradientBoostingClassifier
+# KNeighborsClassifier
+# LabelPropagation
+# LabelSpreading
+# LinearDiscriminantAnalysis
+# LogisticRegression
+# LogisticRegressionCV
+# MLPClassifier
+# MultiOutputClassifier
+# MultinomialNB
+# NuSVC
+# OneVsRestClassifier
+# Pipeline
+# QuadraticDiscriminantAnalysis
+# RFE
+# RFECV
+# RadiusNeighborsClassifier
+# RandomForestClassifier
+# RandomizedSearchCV
+# SGDClassifier
+# SVC
+# SelfTrainingClassifier
+# StackingClassifier
+# VotingClassifier

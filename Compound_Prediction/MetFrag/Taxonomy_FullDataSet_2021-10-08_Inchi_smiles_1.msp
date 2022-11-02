@@ -1,0 +1,349 @@
+Name:  Kynurenic acid
+Notes:  Consensus spectrum; Acetonitrile/Water/Formic acid; added_Vial_ID=12
+Precursor_type:  [M+H]+
+Spectrum_type:  MS2
+PrecursorMZ:  190.0499
+Instrument_type:  Q-TOF
+Instrument:  Agilent QTOF 6530
+Sample_inlet:  direct flow injection
+Ionization:  ESI
+In-source_voltage:  150
+Collision_gas:  N2
+Collision_energy:  4
+Ion_mode:  P
+InChIKey:  HCZHHEIFKROPDY-UHFFFAOYSA-N
+Synon:  2-Quinolinecarboxylic acid, 4-hydroxy-
+Formula:  C10H7NO3
+MW:  189
+ExactMass:  189.042593
+CASNO:  492273
+NISTNO:  1054509
+ID:  539
+Comment:  NIST Mass Spectrometry Data Center
+Num peaks:  6
+103.03	11.29
+125.08	16.18
+144.04	118.88
+171.09	82.12
+172.03	83.02
+190.04	999.0
+
+Name:  Glutaric acid
+Notes:  Consensus spectrum; Acetonitrile/Water/Formic acid; added_Vial_ID=78
+Precursor_type:  [M+H]+
+Spectrum_type:  MS2
+PrecursorMZ:  133.0495
+Instrument_type:  Q-TOF
+Instrument:  Agilent QTOF 6530
+Sample_inlet:  direct flow injection
+Ionization:  ESI
+In-source_voltage:  150
+Collision_gas:  N2
+Collision_energy:  10
+Ion_mode:  P
+InChIKey:  JFCQEDHGNNZCLN-UHFFFAOYSA-N
+Synon:  Pentanedioic acid
+Formula:  C5H8O4
+MW:  132
+ExactMass:  132.042258
+CASNO:  110941
+NISTNO:  1054689
+ID:  718
+Comment:  NIST Mass Spectrometry Data Center
+Num peaks:  5
+43.01	128.17
+45.03	87.51
+55.01	13.99
+87.04	999.0
+115.03	339.26
+
+Name:  2-Isopropylmalic acid
+Notes:  Consensus spectrum; Acetonitrile/Water/Formic acid; added_Vial_ID=202
+Precursor_type:  [M+H]+
+Spectrum_type:  MS2
+PrecursorMZ:  177.0758
+Instrument_type:  Q-TOF
+Instrument:  Agilent QTOF 6530
+Sample_inlet:  direct flow injection
+Ionization:  ESI
+In-source_voltage:  150
+Collision_gas:  N2
+Collision_energy:  27
+Ion_mode:  P
+InChIKey:  BITYXLXUCSKTJS-UHFFFAOYSA-N
+Synon:  Butanedioic acid, 2-hydroxy-2-(1-methylethyl)-
+Formula:  C7H12O5
+MW:  176
+ExactMass:  176.068474
+CASNO:  3237443
+NISTNO:  1054807
+ID:  835
+Comment:  NIST Mass Spectrometry Data Center
+Num peaks:  5
+41.03	63.54
+43.01	41.36
+43.05	999.0
+67.05	53.65
+71.04	210.19
+
+Name:  4-Methoxycinnamic acid
+Notes:  Consensus spectrum; Acetonitrile/Water/Formic acid; added_Vial_ID=884
+Precursor_type:  [M+H]+
+Spectrum_type:  MS2
+PrecursorMZ:  179.0703
+Instrument_type:  Q-TOF
+Instrument:  Agilent QTOF 6530
+Sample_inlet:  direct flow injection
+Ionization:  ESI
+In-source_voltage:  150
+Collision_gas:  N2
+Collision_energy:  7
+Ion_mode:  P
+InChIKey:  AFDXODALSZRGIH-QPJJXVBHSA-N
+Synon:  2-Propenoic acid, 3-(4-methoxyphenyl)-
+Formula:  C10H10O3
+MW:  178
+ExactMass:  178.062994
+CASNO:  830091
+NISTNO:  1055275
+ID:  1292
+Comment:  NIST Mass Spectrometry Data Center
+Num peaks:  4
+117.04	10.69
+133.06	62.84
+161.05	999.0
+179.06	158.94
+
+Name:  Shikimic acid
+Notes:  Consensus spectrum; Acetonitrile/Water/Formic acid; added_Vial_ID=938
+Precursor_type:  [2M+H]+
+Spectrum_type:  MS2
+PrecursorMZ:  349.1129
+Instrument_type:  Q-TOF
+Instrument:  Agilent QTOF 6530
+Sample_inlet:  direct flow injection
+Ionization:  ESI
+In-source_voltage:  150
+Collision_gas:  N2
+Collision_energy:  33
+Ion_mode:  P
+InChIKey:  JXOHGGNKMLTUBP-HSUXUTPPSA-N
+Synon:  1-Cyclohexene-1-carboxylic acid, 3,4,5-trihydroxy-, (3R,4S,5R)-
+Formula:  C7H10O5
+MW:  174
+ExactMass:  174.052823
+CASNO:  138590
+NISTNO:  1055322
+ID:  1339
+Comment:  NIST Mass Spectrometry Data Center
+Num peaks:  14
+41.03	39.16
+47.01	28.37
+55.01	52.55
+55.05	620.58
+65.03	367.03
+67.05	616.98
+69.03	38.26
+77.03	12.49
+83.04	999.0
+93.02	355.24
+95.04	69.93
+111.03	693.11
+121.02	331.77
+139.03	605.49
+
+Name:  trans-Cinnamic acid
+Notes:  Consensus spectrum; Acetonitrile/Water/Formic acid; added_Vial_ID=986
+Precursor_type:  [M+H]+
+Spectrum_type:  MS2
+PrecursorMZ:  149.0597
+Instrument_type:  Q-TOF
+Instrument:  Agilent QTOF 6530
+Sample_inlet:  direct flow injection
+Ionization:  ESI
+In-source_voltage:  150
+Collision_gas:  N2
+Collision_energy:  20
+Ion_mode:  P
+InChIKey:  WBYWAXJHAXSJNI-VOTSOKGWSA-N
+Synon:  2-Propenoic acid, 3-phenyl-, (2E)-
+Formula:  C9H8O2
+MW:  148
+ExactMass:  148.052429
+CASNO:  140103
+NISTNO:  1055361
+ID:  1378
+Comment:  NIST Mass Spectrometry Data Center
+Num peaks:  5
+77.03	151.95
+79.05	24.48
+102.04	13.19
+103.05	999.0
+131.04	273.73
+
+Name:  Azelaic acid
+Notes:  Consensus spectrum; Acetonitrile/Water/Formic acid; added_Vial_ID=992
+Precursor_type:  [M+H-H2O]+
+Spectrum_type:  MS2
+PrecursorMZ:  171.1016
+Instrument_type:  Q-TOF
+Instrument:  Agilent QTOF 6530
+Sample_inlet:  direct flow injection
+Ionization:  ESI
+In-source_voltage:  150
+Collision_gas:  N2
+Collision_energy:  7
+Ion_mode:  P
+InChIKey:  BDJRBEYXGGNYIS-UHFFFAOYSA-N
+Synon:  Nonanedioic acid
+Formula:  C9H16O4
+MW:  188
+ExactMass:  188.104859
+CASNO:  123999
+NISTNO:  1055458
+ID:  1475
+Comment:  NIST Mass Spectrometry Data Center
+Num peaks:  19
+43.01	97.6
+55.01	59.14
+55.05	477.22
+59.04	29.87
+67.05	115.38
+69.03	122.48
+69.06	88.81
+79.05	83.02
+81.06	81.62
+83.08	463.34
+93.06	48.35
+97.09	999.0
+101.09	31.47
+107.08	267.23
+125.09	779.82
+135.07	59.14
+143.1	21.98
+153.08	59.24
+171.09	191.01
+
+Name:  Itaconic acid
+Notes:  Consensus spectrum; Acetonitrile/Water/Formic acid; added_Vial_ID=1041
+Precursor_type:  [M+H]+
+Spectrum_type:  MS2
+PrecursorMZ:  131.0339
+Instrument_type:  Q-TOF
+Instrument:  Agilent QTOF 6530
+Sample_inlet:  direct flow injection
+Ionization:  ESI
+In-source_voltage:  150
+Collision_gas:  N2
+Collision_energy:  40
+Ion_mode:  P
+InChIKey:  LVHBHZANLOWSRM-UHFFFAOYSA-N
+Synon:  Butanedioic acid, methylene-
+Formula:  C5H6O4
+MW:  130
+ExactMass:  130.026608
+CASNO:  97654
+NISTNO:  1055553
+ID:  1570
+Comment:  NIST Mass Spectrometry Data Center
+Num peaks:  12
+29.0	52.45
+29.03	40.66
+31.01	83.62
+38.01	19.58
+39.02	803.5
+41.03	159.54
+43.01	11.69
+44.99	999.0
+55.01	20.58
+57.03	237.46
+67.01	24.48
+85.02	25.37
+
+Name:  Dodecanoic acid
+Notes:  Consensus spectrum; Acetonitrile/Water/Formic acid; added_Vial_ID=97
+Precursor_type:  [M+H-H2O]+
+Spectrum_type:  MS2
+PrecursorMZ:  183.1744
+Instrument_type:  Q-TOF
+Instrument:  Agilent QTOF 6530
+Sample_inlet:  direct flow injection
+Ionization:  ESI
+In-source_voltage:  150
+Collision_gas:  N2
+Collision_energy:  5
+Ion_mode:  P
+InChIKey:  POULHZVOKOAJMA-UHFFFAOYSA-N
+Synon:  Lauric acid
+Formula:  C12H24O2
+MW:  200
+ExactMass:  200.17763
+CASNO:  143077
+NISTNO:  1056376
+ID:  2369
+Comment:  NIST Mass Spectrometry Data Center
+Num peaks:  6
+56.94	26.17
+97.96	305.59
+100.93	11.69
+140.95	23.08
+141.95	999.0
+183.17	15.28
+
+Name:  3,5-Dihydroxybenzoic acid
+Notes:  Consensus spectrum; Acetonitrile/Water/Formic acid; added_Vial_ID=1170
+Precursor_type:  [M+H]+
+Spectrum_type:  MS2
+PrecursorMZ:  155.0339
+Instrument_type:  Q-TOF
+Instrument:  Agilent QTOF 6530
+Sample_inlet:  direct flow injection
+Ionization:  ESI
+In-source_voltage:  150
+Collision_gas:  N2
+Collision_energy:  4
+Ion_mode:  P
+InChIKey:  UYEMGAFJOZZIFP-UHFFFAOYSA-N
+Synon:  Benzoic acid, 3,5-dihydroxy-
+Formula:  C7H6O4
+MW:  154
+ExactMass:  154.026608
+CASNO:  99105
+NISTNO:  1056660
+ID:  2635
+Comment:  NIST Mass Spectrometry Data Center
+Num peaks:  4
+93.03	29.87
+111.04	98.6
+137.02	356.24
+155.03	999.0
+
+Name:  Orcinol
+Related_CAS#:  6153395
+Notes:  Consensus spectrum; Acetonitrile/Water/Formic acid; added_Vial_ID=1198
+Precursor_type:  [M+H]+
+Spectrum_type:  MS2
+PrecursorMZ:  125.0597
+Instrument_type:  Q-TOF
+Instrument:  Agilent QTOF 6530
+Sample_inlet:  direct flow injection
+Ionization:  ESI
+In-source_voltage:  150
+Collision_gas:  N2
+Collision_energy:  5
+Ion_mode:  P
+InChIKey:  OIPPWFOQEKKFEE-UHFFFAOYSA-N
+Synon:  5-Methylresorcinol
+Formula:  C7H8O2
+MW:  124
+ExactMass:  124.0524297
+CASNO:  504154
+NISTNO:  1056676
+ID:  2651
+Comment:  NIST Mass Spectrometry Data Center
+Num peaks:  5
+77.03	15.08
+79.05	32.37
+107.05	91.81
+110.03	57.84
+125.06	999.0

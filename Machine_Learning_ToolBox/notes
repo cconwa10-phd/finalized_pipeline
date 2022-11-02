@@ -1,0 +1,55 @@
+Machine Learning Algorithms
+Linear Regression
+Logistic Regression
+Decision Tree
+SVM
+Naive Bayes
+kNN
+K-Means
+Random Forest
+Dimensionality Reduction Algorithms
+Gradient Boosting algorithms
+    GBM
+    XGBoost
+    LightGBM
+    CatBoost
+
+
+Regression
+1. Linear Regression
+2. Polynomial Regression
+3. Logistic Regression
+4. Quantile Regression
+5. Ridge Regression
+6. Lasso Regression
+7. Elastic Net Regression
+8. Principal Components Regression (PCR)
+9. Partial Least Squares (PLS) Regression
+10. Support Vector Regression
+11. Ordinal Regression
+12. Poisson Regression
+13. Negative Binomial Regression
+14. Quasi Poisson Regression
+15. Cox Regression
+16. Tobit Regression
+
+Distance
+1.Euclidean Distance
+2. Manhattan Distance
+3. Minkowski Distance
+4. Hamming Distance
+5. L1, L2 and Lp norms
+6. Cosine Distance and Similarity
+
+
+1. Jaccard
+2. Bray-Curtis
+3. Kullback–Leibler
+4. Unifrac
+5. Bregman Distance
+6. itacoro-sito distance
+7. Tanimoto Similarity
+8. Log-Likelihood Ratios
+9. Spearman Correlation
+10. Pearson Correlation
+

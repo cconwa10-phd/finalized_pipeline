@@ -1,0 +1,4 @@
+Use BioTransformer to find motifs - Use rdkit to find specific functional groups - add additional transformations from Tims list - 
+then search those transformations to see if they are valid or not - make sure to take out the transformations that BT already found
+
+

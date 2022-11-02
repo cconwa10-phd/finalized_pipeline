@@ -1,0 +1,6 @@
+1. Take all coded paths and have them as parameters - argparse
+2. Knit all steps together so that they run one after the other
+3. Separate out NIST and MSFINDER Result functions?
+4. Fill out the command line call for the library_search (only works on PC)
+5. Need to optimize the PUGREST API call to PUBCHEM - use pandas to take unique InchIKeys only not all...
+6. Need other libraries to search for those InChIKeys that do not have a match in PUBCHEM

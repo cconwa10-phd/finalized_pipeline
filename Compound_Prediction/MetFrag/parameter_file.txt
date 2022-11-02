@@ -1,0 +1,16 @@
+PeakListPath = peaks.txt
+IonizedPrecursorMass = 285.03994
+ResultsPath = /Users/ciaraconway/new_complete_pipeline/Compound_Prediction/MetFrag/
+IsPositiveIonMode = False
+MetFragDatabaseType = PubChem
+DatabaseSearchRelativeMassDeviation = 5
+FragmentPeakMatchAbsoluteMassDeviation = 0.008
+FragmentPeakMatchRelativeMassDeviation = 5
+PrecursorIonMode = 1
+MetFragScoreTypes = FragmenterScore
+MetFragScoreWeights = 1.0
+MetFragCandidateWriter = CSV
+SampleName = results
+MaximumTreeDepth = 2
+MetFragPreProcessingCandidateFilter = UnconnectedCompoundFilter
+MetFragPostProcessingCandidateFilter = InChIKeyFilter
