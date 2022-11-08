@@ -19,13 +19,11 @@ def isfloat(num):
     except ValueError:
         return False
 
-def assign_spectra(filename, msp):
+def assign_spectra(msp):
     mspFile = ""
     mzval = []
     intval = []
     meta_data = {}
-    data = pd.read_csv(filename, encoding = "ISO-8859-1")
-    inchiks = data["InChIKey_use"].values
 
     count = 0
     for line in open(msp):
@@ -35,7 +33,11 @@ def assign_spectra(filename, msp):
             if ":" in line:
                 key, value = line.split(":", 1)
                 if key.strip() == "Name":
-                    value = value.strip() + ":::" + str(count)
+                    value = value.strip().split(" ", 1)[1].split("(", 1)[1].split(")", 1)[0] + ":::" + str(count)
+                    meta_data[key] = value
+                elif key.strip() == "Num Peaks":
+                    meta_data["Spectrum_type"] = "MS2"
+                    meta_data["Ion_mode"] = "P"
                     meta_data[key] = value
                 else:
                     meta_data[key] = value
@@ -48,20 +50,13 @@ def assign_spectra(filename, msp):
                     inten, extra = intensity.split(" ", 1)
                     intval.append(float(inten.strip()))
         else:
-            if meta_data.get("InChIKey") is not None:
-                found = inch_loop(inchiks, meta_data.get("InChIKey").strip())
-                if found:
-                    count += 1
-                    for kMeta, vMeta in meta_data.items():
-                        mspFile += str(kMeta) + ": " + str(vMeta) + "\n"
-                    for kMZ, vInt in zip(mzval, intval):
-                        mspFile += str(kMZ) + "\t" + str(vInt) + "\n"
-                    mspFile += "\n"
-                    print(meta_data)
-                else:
-                    pass
-            else:
-                pass
+            count += 1
+            for kMeta, vMeta in meta_data.items():
+                mspFile += str(kMeta) + ": " + str(vMeta) + "\n"
+            for kMZ, vInt in zip(mzval, intval):
+                mspFile += str(kMZ) + "\t" + str(vInt) + "\n"
+            mspFile += "\n"
+            print(meta_data)
             mzval = []
             intval = []
             meta_data = {}
@@ -78,10 +73,10 @@ def write_out_msp_USDA(mspFile, file):
 
 
 def main():
-    msp_file_search = "/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/lcmsmspn_MoNA.msp"
-    csv_match = "/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/cmpd_test_software.csv"
-    new_msp = assign_spectra(csv_match, msp_file_search)
-    out = "/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/cmpd_test_software.msp"
+    msp_file_search = "/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/hhear.msp"
+    #csv_match = "/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/cmpd_test_software.csv"
+    new_msp = assign_spectra(msp_file_search)
+    out = "/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/hhear2.msp"
     write_out_msp_USDA(new_msp, out)
 
 if __name__ == '__main__':
