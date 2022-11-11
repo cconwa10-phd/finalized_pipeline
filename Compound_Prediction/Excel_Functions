@@ -1,0 +1,3 @@
+
+Normalization Logic
+=IF(OR(EXACT(J16,"Hybrid"),EXACT(J16,"Identity")),(C16/1000),IF(EXACT(J16,"MSFinder"),C16/10,IF(EXACT(J16,"SIRIUS"),((C16-$K$2)/($L$2-$K$2)), C16)))
