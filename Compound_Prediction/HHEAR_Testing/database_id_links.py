@@ -6,7 +6,7 @@ from collections import defaultdict
 
 def get_info_from_id(id_):
     r = requests.get(
-        f'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/{id_}/property/CanonicalSMILES,InChI,IUPACName/JSON')
+        f'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/{id_}/property/CanonicalSMILES,InChI,IUPACName,InChIKey/JSON')
     code = r.status_code
     print(code)
     if code != 200:
@@ -18,8 +18,8 @@ def get_info_from_id(id_):
             csmiles = r['PropertyTable']['Properties'][0]['CanonicalSMILES']
         else:
             csmiles = "Nah"
-        if not(r['PropertyTable']['Properties'][0]['InChI'] is None):
-            cinchi = r['PropertyTable']['Properties'][0]['InChI']
+        if not(r['PropertyTable']['Properties'][0]['InChIKey'] is None):
+            cinchi = r['PropertyTable']['Properties'][0]['InChIKey']
         else:
             cinchi = "Nah"
     return csmiles, cinchi
@@ -54,7 +54,7 @@ def inchi_key_smiles(mspFile, ref_data):
     df = pd.DataFrame(metaData)
     inchi_col = df.pop("HMDB")
     df.insert(0,"HMDB", inchi_col)
-    df1 = hmdb_xml_match_merge(df, ref_data, "target_compounds.csv")
+    df1 = hmdb_xml_match_merge(df, ref_data, "target_compounds2.csv")
     return df1
 
 

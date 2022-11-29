@@ -31,7 +31,7 @@ def smile_validation(file):
     smilesdf.to_csv("/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/HHEAR_Results/_run_validate.csv")
     return smilesdf
 
-def ClusterFpsS(fps, labels):
+def ClusterFpsS(fps, tol):
     size = len(fps)
     if size > 1:
         #print(size)
@@ -48,7 +48,7 @@ def ClusterFpsS(fps, labels):
         Z = sch.linkage(ndistanceM, 'complete')
         #dn = sch.dendrogram(Z, leaf_rotation=270, leaf_font_size=3, labels = labels, color_threshold=0.15)
 
-        hc = sch.fcluster(Z, t = 0.15, criterion = 'distance', depth=2, R=None, monocrit=None)
+        hc = sch.fcluster(Z, t = tol, criterion = 'distance', depth=2, R=None, monocrit=None)
 
         cs = hc.tolist()
     else:
@@ -56,7 +56,7 @@ def ClusterFpsS(fps, labels):
     #print(len(cs))
     return cs
 
-def alignment_grouping(file):
+def alignment_grouping(file, tol):
     count_lists = []
     df = pd.read_csv(file, index_col=0, header=0)
     ids = df['Version'].tolist()
@@ -69,7 +69,7 @@ def alignment_grouping(file):
         labels = smilesdf["Peptide"].values
         mols = [Chem.MolFromSmiles(smile) for smile in smiles]
         fps = [AllChem.GetMorganFingerprintAsBitVect(mol,2,1024) for mol in mols]
-        clustersS = ClusterFpsS(fps, labels)
+        clustersS = ClusterFpsS(fps, tol)
         smilesdf["mols"] = mols
         smilesdf["clusters"] = clustersS
         smilesdf = smilesdf.sort_values(by=["clusters"])
@@ -108,9 +108,9 @@ def alignment_grouping(file):
         # tempmolL = []
     df_counts = pd.DataFrame(count_lists, columns=["Name", "Length", "Ratio_1", "Ratio_2", "Ratio_3"])
     dfNew = pd.concat(groups)
-    df_counts.to_csv("/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/HHEAR_Results/all_results_count.csv")
-    dfNew.to_csv("/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/HHEAR_Results/all_results_clusters.csv")
-
+    #df_counts.to_csv("/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/HHEAR_Results/all_results_count.csv")
+    #dfNew.to_csv("/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/HHEAR_Results/all_results_clusters.csv")
+    return dfNew
 def rdkit_fig(file):
     pass
 
@@ -119,7 +119,17 @@ def main():
     file = "/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/HHEAR_Results/all_results_less.csv"
     #smile_validation(file)
     file2 = "/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/HHEAR_Results/_run_validate.csv"
-    alignment_grouping(file2)
-
+    empty_data = pd.DataFrame()
+    tols = [0, 0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90, 1.00]
+    for tol in tols:
+        df = alignment_grouping(file2, tol)
+        cluster = df["clusters"].tolist()
+        id = df['Version'].tolist()
+        typ = df["Type"].tolist()
+        empty_data[str(tol) + "version"] = id
+        empty_data[str(tol) + "type"] = typ
+        empty_data[str(tol) + "clusters"] = cluster
+        print(empty_data)
+    empty_data.to_csv("/Users/ciaraconway/Documents/all_databases/Spectra/LCMSMS/HHEAR_Results/fm_hhear_data.csv")
 if __name__ == '__main__':
     main()
